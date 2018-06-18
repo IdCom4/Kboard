@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.txtC {
+    text-align: center;
+}
+
+.txtL {
+    text-align: left;
+}
+
+.txtR {
+    text-align: right;
+}
+
+.JcC {
+    justify-content: center;
+}
+
+.JcL {
+    justify-content: left;
+}
+
+.JcR {
+    justify-content: right;
+}
+
+.aItemC {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.noWrap {
+    flex-wrap: nowrap;
+}
+
+.FdC {
+    flex-direction: column;
+}
+
+.FdR {
+    flex-direction: row;
+}
+
+.w100pr {
+    width: 100%;
+}
+
+.w100vw {
+    width: 100vw;
+}
+
+.h100pr {
+    height: 100%;
+}
+
+.h100vh {
+    height: 100vh;
+}
+
+.maxW100pr {
+    max-width: 100%;
+}
+
+.maxW100vw {
+    max-width: 100vw;
+}
+
+.maxH100pr {
+    max-height: 100%;
+}
+
+.maxH100vh {
+    max-height: 100vh;
+}
+
+.minW100pr {
+    min-width: 100%;
+}
+
+.minW100vw {
+    min-width: 100vw;
+}
+
+.minH100pr {
+    min-height: 100%;
+}
+
+.minH100vh {
+    min-height: 100vh;
+}
+
+.imgFormat {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
