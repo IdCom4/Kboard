@@ -42,28 +42,29 @@ body {
 #weAre {
     position: absolute;
     font-size: 45px;
-    top: 155px;
-    left: 500px;
+    top: 55px;
+    right: 400px;
     opacity: 0;
     transition: 2s;
 }
 
 #andWe {
+    white-space: nowrap;
     position: absolute;
     font-size: 45px;
-    top: 440px;
-    left: 920px;
+    top: 350px;
+    left: 250px;
     opacity: 0;
     transition: 2s;
 }
 
 #wordsSpan {
     font-weight: bold;
-    color: white;
+    color: rgb(196, 57, 117);
 }
 
 #cursor {
     height: 50px;
     width: 15px;
-    background-color: white;
+    background-color: rgb(196, 57, 117);
 }

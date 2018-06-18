@@ -8,9 +8,10 @@ $(document).ready(function() {
     var wordsSpan = $("#wordsSpan");
 
     var wordsTab = [
-        "CREATE",
-        "DEVELOP",
-        "IMAGINE",
+        "IMAGINE IT",
+        "DESIGN IT",
+        "DEVELOP IT",
+        "MAKE IT."
     ];
 
     var wordsIndex = 0;
@@ -32,22 +33,22 @@ $(document).ready(function() {
     setTimeout(function() {
         stickLeft.css("left", "0");
         stickRight.css("right", "0");
-    }, 4000);
+    }, 2450);
 
     setTimeout(function() {
         stickLeft.css("left", "100vw");
         stickRight.css("right", "100vw");
-    }, 7000);
+    }, 5000);
 
     setTimeout(function() {
         weAre.css("opacity", "1");
-    }, 9000);
+    }, 7000);
 
     setTimeout(function() {
         andWe.css("opacity", "1");
-    }, 11000);
+    }, 9000);
 
-    setTimeout(startInterval, 12000);
+    setTimeout(startInterval, 10000);
 
     function startInterval() {
         intervalSeconds = setInterval(function() {
@@ -56,18 +57,24 @@ $(document).ready(function() {
         intervalAlgo = setInterval(function() {
             if(writing) {
                 if(lettersIndex < wordsTab[wordsIndex].length) {
+                    wordsSpan.css("transition", "0s");
+                    wordsSpan.css("color", "white");
                     wordsSpan.text(wordsSpan.text() + wordsTab[wordsIndex][lettersIndex]);
                     lettersIndex++;
                     lastTime = seconds;
                 }
                 else {
+                    if(wordsIndex == wordsTab.length - 1) {
+                        wordsSpan.css("transition", "1s");
+                        wordsSpan.css("color", "rgb(196, 57, 117)");
+                    }
                     if(intervalCount % 2 == 1) {
                         cursor.css("opacity", "1");
                     }
                     else {
                         cursor.css("opacity", "0");
                     }
-                    if(seconds - lastTime >= 2) {
+                    if((wordsIndex != wordsTab.length - 1 && seconds - lastTime >= 3) || (wordsIndex == wordsTab.length - 1 && seconds - lastTime >= 5)) {
                         writing = false;
                         lettersIndex--;
                         cursor.css("opacity", "1");
@@ -88,6 +95,6 @@ $(document).ready(function() {
                 }
             }
             intervalCount++;
-        }, 500);
+        }, 300);
     }
 });
