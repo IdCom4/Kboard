@@ -43,7 +43,7 @@ body {
     position: absolute;
     font-size: 45px;
     top: 155px;
-    left: 400px;
+    left: 500px;
     opacity: 0;
     transition: 2s;
 }
@@ -51,8 +51,8 @@ body {
 #andWe {
     position: absolute;
     font-size: 45px;
-    top: 420px;
-    left: 900px;
+    top: 440px;
+    left: 920px;
     opacity: 0;
     transition: 2s;
 }
