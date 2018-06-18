@@ -33,7 +33,7 @@ $(document).ready(function() {
     setTimeout(function() {
         stickLeft.css("left", "0");
         stickRight.css("right", "0");
-    }, 2450);
+    }, 3000);
 
     setTimeout(function() {
         stickLeft.css("left", "100vw");
