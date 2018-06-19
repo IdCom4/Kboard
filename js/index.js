@@ -8,10 +8,10 @@ $(document).ready(function() {
     var wordsSpan = $("#wordsSpan");
 
     var wordsTab = [
-        "IMAGINE IT",
-        "DESIGN IT",
-        "DEVELOP IT",
-        "MAKE IT."
+        "IdCom4",
+        "TxtShad",
+        "Pandorist",
+        "IronTac/ArcherBrutal."
     ];
 
     var wordsIndex = 0;
