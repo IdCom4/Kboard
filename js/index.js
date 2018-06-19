@@ -8,10 +8,11 @@ $(document).ready(function() {
     var wordsSpan = $("#wordsSpan");
 
     var wordsTab = [
-        "IdCom4",
-        "TxtShad",
-        "Pandorist",
-        "IronTac/ArcherBrutal."
+        "MentalDeMetal",
+        "MentalDePapier",
+        "MentalFebrile",
+        "MentalJoyeux",
+        "MentalTropGénial"
     ];
 
     var wordsIndex = 0;
