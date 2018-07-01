@@ -1,0 +1,40 @@
+#thirdPitch {
+	position: relative;
+	top: -5vh;
+}
+
+.person-wrapper {
+	width: 300px;
+	margin: 0 30px 0 30px;
+}
+
+.person-wrapper h2 {
+	color: white;
+	font-size: 30px;
+}
+
+.person-wrapper .description {
+	margin-top: 40px;
+	font-size: 20px;
+}
+
+.img-wrapper {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	border: solid 2px white;
+	margin: 0 25px 25px 25px;
+}
+
+.names .cursor {
+	color: white !important;
+	background-color: white !important;
+}
+
+.description .cursor {
+	opacity: 0;
+}
+
+.skill {
+	transition: 1s !important;
+}

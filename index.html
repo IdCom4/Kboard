@@ -4,24 +4,78 @@
 		<meta charset="utf-8">
 		<meta name="description" content="We are Kboard">
         <title>Kboard</title>
-        <link rel="stylesheet" type="text/css" href="css/lib.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://use.fontawesome.com/64906f59e1.js"></script>
+
 		<script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/screen1.js"></script>
+        <script type="text/javascript" src="js/screen2.js"></script>
+        <script type="text/javascript" src="js/screen3.js"></script>
+        <script type="text/javascript" src="js/screen4.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/lib.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/screen1.css">
+        <link rel="stylesheet" type="text/css" href="css/screen2.css">
+        <link rel="stylesheet" type="text/css" href="css/screen3.css">
+        <link rel="stylesheet" type="text/css" href="css/screen4.css">
+
 	</head>
 	<body class="w100vw maxW100vw minH100vh">
-        <div id="logo-wrapper">
-            <img class="imgFormat" src="assets/imgs/Kboard.png" alt="Kboards logo">
-            <p id="weAre">We&nbsp;are</p>
-            <div id="andWe" class="flex row noWrap">
-                <p>and&nbsp;we&nbsp;are&nbsp;<span id="wordsSpan"></span></p>
-                <div id="cursor"></div>
+        <div id="screen1" class="w100vw maxW100vw minH100vh screen">
+            <div id="stick-left" class="stick"></div>
+            <div id="stick-right" class="stick"></div>
+            <div id="logo-wrapper">
+                <img class="imgFormat" src="assets/imgs/Kboard.png" alt="Kboards logo">
+            </div>
+            <div id="firstPitch" class="flex row noWrap JcC">
+                <p><span class="cursor">I</span></p>
             </div>
         </div>
-        <div id="stick-left" class="stick"></div>
-        <div id="stick-right" class="stick"></div>
-        
+        <div id="screen2" class="w100vw maxW100vw minH100vh screen">
+            <div id="secondPitch" class="flex row noWrap JcC">
+                <p><span class="cursor">I</span></p>
+            </div>
+        </div>
+        <div id="screen3" class="w100vw maxW100vw minH100vh screen flex row JcC aItemC">
+            <div id="thirdPitch" class="flex row">
+                <div id="ADRIEN" class="person-wrapper">
+                    <div class="img-wrapper imgWrapper">
+                        <img src="assets/imgs/adrien.jpg" alt="adrien baudry" class="imgFormat">
+                    </div>
+                    <h2 class="names"><span class="cursor">I</span></h2>
+                    <p class="description"><span class="cursor">I</span></p>
+                </div>
+                <div id="IDRISS" class="person-wrapper">
+                    <div class="img-wrapper imgWrapper">
+                        <img src="assets/imgs/idriss.jpg" alt="adrien baudry" class="imgFormat">
+                    </div>
+                    <h2 class="names"><span class="cursor">I</span></h2>
+                    <p class="description"><span class="cursor">I</span></p>
+                </div>
+                <div id="ALEXIS" class="person-wrapper">
+                    <div class="img-wrapper imgWrapper">
+                        <img src="assets/imgs/alexis.jpg" alt="adrien baudry" class="imgFormat">
+                    </div>
+                    <h2 class="names"><span class="cursor">I</span></h2>
+                    <p class="description"><span class="cursor">I</span></p>
+                </div>
+            </div>
+        </div>
+        <div id="screen4" class="w100vw maxW100vw minH100vh screen flex JcC aItemC">
+            <div id="fourthPitch" class="">
+                <h2 id="keepInTouch">
+                    <span id="letter-1" class="letter">K</span><span id="letter-2" class="letter">E</span><span id="letter-3" class="letter">E</span><span id="letter-4" class="letter">P</span>
+
+                    <span id="letter-5" class="letter">I</span><span id="letter-6" class="letter">N</span>
+
+                    <span id="letter-7" class="letter">T</span><span id="letter-8" class="letter">O</span><span id="letter-9" class="letter">U</span><span id="letter-10" class="letter">C</span><span id="letter-11" class="letter">H</span>
+                     
+                    <span id="letter-11" class="letter">!</span>
+                </h2>
+                <p id="contact"><span class="cursor">I</span></p>
+            </div>
+        </div>
     </body>
 </html>

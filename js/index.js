@@ -1,101 +1,76 @@
 $(document).ready(function() {
-    var logo = $("#logo-wrapper");
-    var stickLeft = $("#stick-left");
-    var stickRight = $("#stick-right");
-    var weAre = $("#weAre");
-    var andWe = $("#andWe");
-    var cursor = $("#cursor");
-    var wordsSpan = $("#wordsSpan");
+    function newScreenObject(top, id) {
+        var obj = {};
+        obj.domObject = $("#screen" + id);
+        obj.top = top;
 
-    var wordsTab = [
-        "MentalDeMetal",
-        "MentalDePapier",
-        "MentalFebrile",
-        "MentalJoyeux",
-        "MentalTropGénial"
-    ];
-
-    var wordsIndex = 0;
-    var lettersIndex = 0;
-
-    var intervalAlgo;
-    var intervalSeconds;
-    var seconds = 0;
-    var lastTime = 0;
-
-    var writing = true;
-
-    var intervalCount = 0;
-
-    setTimeout(function() {
-        logo.css("top", "100px");
-    }, 1000);
-
-    setTimeout(function() {
-        stickLeft.css("left", "0");
-        stickRight.css("right", "0");
-    }, 3000);
-
-    setTimeout(function() {
-        stickLeft.css("left", "100vw");
-        stickRight.css("right", "100vw");
-    }, 5000);
-
-    setTimeout(function() {
-        weAre.css("opacity", "1");
-    }, 7000);
-
-    setTimeout(function() {
-        andWe.css("opacity", "1");
-    }, 9000);
-
-    setTimeout(startInterval, 10000);
-
-    function startInterval() {
-        intervalSeconds = setInterval(function() {
-            seconds++;
-        }, 1000);
-        intervalAlgo = setInterval(function() {
-            if(writing) {
-                if(lettersIndex < wordsTab[wordsIndex].length) {
-                    wordsSpan.css("transition", "0s");
-                    wordsSpan.css("color", "white");
-                    wordsSpan.text(wordsSpan.text() + wordsTab[wordsIndex][lettersIndex]);
-                    lettersIndex++;
-                    lastTime = seconds;
-                }
-                else {
-                    if(wordsIndex == wordsTab.length - 1) {
-                        wordsSpan.css("transition", "1s");
-                        wordsSpan.css("color", "rgb(196, 57, 117)");
-                    }
-                    if(intervalCount % 2 == 1) {
-                        cursor.css("opacity", "1");
-                    }
-                    else {
-                        cursor.css("opacity", "0");
-                    }
-                    if((wordsIndex != wordsTab.length - 1 && seconds - lastTime >= 3) || (wordsIndex == wordsTab.length - 1 && seconds - lastTime >= 5)) {
-                        writing = false;
-                        lettersIndex--;
-                        cursor.css("opacity", "1");
-                    }
-                }
-            }
-            else {
-                if(lettersIndex >= 0) {
-                    var text = wordsSpan.text();
-                    text = text.slice(0, text.length - 1);
-                    wordsSpan.text(text);
-                    lettersIndex--;
-                }
-                else {
-                    lettersIndex = 0;
-                    writing = true;
-                    wordsIndex = (wordsIndex < wordsTab.length - 1) ? wordsIndex + 1 : 0;
-                }
-            }
-            intervalCount++;
-        }, 300);
+        obj.domObject.css("top", top + "vh");
+        return obj;
     }
+
+    var screenTab = new Array();
+    var nbrScreen = 4;
+    var currentScreenId = 1;
+
+    var indexInterval;
+
+    var introOver = true;
+
+    for(var id = 0; id < nbrScreen; id++) {
+        var top = id * 100;
+        screenTab.push(newScreenObject(top, id + 1));
+    }
+
+    setTimeout(function() {
+        screenDown();
+    }, 10000);
+
+    setTimeout(function() {
+        screenDown();
+        introOver = true;
+    }, 22000);
+
+    setTimeout(function() {
+        screenDown();
+    }, 38000);
+
+    setTimeout(function() {
+        console.log("intro over");
+        introOver = true;
+    }, 48000);
+
+    function screenUp() {
+        if(currentScreenId > 1) {
+            for(var i = 0; i < screenTab.length; i++) {
+                screenTab[i].top += 100;
+                screenTab[i].domObject.css("top", screenTab[i].top + "vh");
+            }
+            currentScreenId--;
+            return 0;
+        }
+        return 1;
+    }
+
+    function screenDown() {
+        if(currentScreenId < nbrScreen) {
+            for(var i = 0; i < screenTab.length; i++) {
+                screenTab[i].top -= 100;
+                screenTab[i].domObject.css("top", screenTab[i].top + "vh");
+            }
+            currentScreenId++;
+            return 0;
+        }
+        return 1;
+    }
+
+    $('body').bind('mousewheel', function(e){
+        if(introOver) {
+            if(e.originalEvent.wheelDelta /120 > 0) {
+                screenUp();
+            }
+            else{
+                screenDown();
+            }
+        }  
+    });
 });

@@ -1,0 +1,16 @@
+#screen2 {
+    top: 100vh;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#secondPitch {
+	font-size: 50px;
+	width: 70vw;
+}
+
+#turnOver {
+	color: white;
+}
