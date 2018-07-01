@@ -27,7 +27,7 @@ $(document).ready(function() {
     setTimeout(function() {
         /*fourthPitch.css("opacity", "1");*/
         startScreen4Interval();
-    }, 3000);
+    }, 39000);
 
 
     function startScreen4Interval() {
